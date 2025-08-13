@@ -1,227 +1,116 @@
-/***** Reset *****/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-  
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    background: rgb(240, 248, 255); /* Fallback */
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), 
+                rgb(255, 230, 200), rgb(200, 230, 255));
     color: #333;
+    transition: background 0.3s ease;
 }
-  
-/***** Navbar *****/
-.navbar {
-    background: #1875d1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-}
-  
-.logo {
-    color: #f8fafaec;
-    font-size: 20px;
-    font-weight: bold;
-}
-  
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-  
-.nav-links li a {
-    text-decoration: none;
-    color: #ecf0f1;
-    font-weight: 500;
-    padding: 8px 12px;
-}
-  
-.nav-links li a:hover,
-.nav-links li a.active {
-    background: #af75dff1;
-    border-radius: 4px;
-}
-  
-/***** Home Content *****/
-.home-content {
+h1, h2, h3 {
     text-align: center;
-    margin-top: 80px;
+    color: #222;
 }
-  
-.home-content h1 {
-    font-size: 28px;
-    color: #2c3e50;
-    margin-bottom: 15px;
-}
-  
-.home-content p {
-    width: 70%;
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-/***** Forms (SignUp & Login Pages) *****/
-.form-section {
-    width: 400px;
-    background: #fff;
-    padding: 25px;
-    margin: 60px auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.form-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #2c3e50;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-}
-
-form input {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-form button {
-    background: #1875d1;
-    color: #fff;
-    font-size: 16px;
-    padding: 10px;
+hr {
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background: #070be7;
-}
-
-/***** Ticket Booking System Page *****/
-.ticket-booking-content {
-    text-align: center;
-    margin-top: 80px;
-  }
-  
-  .ticket-booking-content h2 {
-    font-size: 26px;
-    margin-bottom: 30px;
-    color: #2c3e50;
-  }
-  
-  .booking-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .btn-book {
-    display: inline-block;
-    background: #1875d1;
-    color: #fff;
-    padding: 15px 20px;
-    font-size: 16px;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background-color 0.3s;
-    width: 220px;
-    text-align: center;
-  }
-  
-  .btn-book:hover {
-    background: #070be7;
-  }
-  
-  /***** Booking Pages (Movie/Event/Bus/Train) *****/
-.booking-content {
+    height: 2px;
+    background: #ddd;
+    margin: 20px auto;
     width: 80%;
-    margin: 40px auto;
-  }
-  
-  .booking-content h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #2c3e50;
-  }
-  
-  .booking-content h3 {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    color: #1875d1;
-  }
-  
-  /***** Table Styles *****/
-  table {
-    width: 100%;
+}
+table {
     border-collapse: collapse;
-    margin-bottom: 20px;
-  }
-  
-  table th, table td {
-    border: 1px solid #ccc;
-    padding: 10px;
+}
+table td {
     text-align: center;
-  }
-  
-  table th {
-    background: #1875d1;
-    color: #fff;
-  }
-  
-  /***** List Styles *****/
-  ul {
-    margin-left: 20px;
-    margin-bottom: 20px;
-  }
-  
-  /***** Form Styles (reuse) *****/
-  .booking-content form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .booking-content form label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .booking-content form input,
-  .booking-content form select {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .booking-content form button {
-    background: #1875d1;
-    color: #fff;
-    font-size: 16px;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
+    vertical-align: top;
+}
+table img {
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
-  }
-  
-  .booking-content form button:hover {
-    background: #070be7;
-  }
-  
+}
+table img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+#cart {
+    background: #fff;
+    border: 2px dashed #444;
+    border-radius: 10px;
+    text-align: left;
+}
+#cart h3 {
+    margin-top: 0;
+    text-align: center;
+}
+#cart ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+#cart ul li {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+}
+#cart button {
+    background: #28a745;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 2px;
+    transition: background 0.2s ease;
+}
+#cart button:hover {
+    background: #218838;
+}
+#cart button:nth-child(2) {
+    background: #dc3545;
+}
+#cart button:nth-child(2):hover {
+    background: #c82333;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+ul {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0;
+}
+ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+audio, video {
+    display: block;
+    margin: 20px auto;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+audio:hover, video:hover {
+    transform: scale(1.02);
+}
+.playing {
+    animation: glowPulse 1.5s infinite;
+}
+
+@keyframes glowPulse {
+    0% { box-shadow: 0 0 10px rgba(0, 200, 255, 0.6); }
+    50% { box-shadow: 0 0 20px rgba(0, 200, 255, 1); }
+    100% { box-shadow: 0 0 10px rgba(0, 200, 255, 0.6); }
+}
+p {
+    text-align: center;
+}

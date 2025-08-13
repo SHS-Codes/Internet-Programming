@@ -1,35 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ticket Reservation System - Home</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Hari Online Shopping</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">Ticket Reservation System</div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="signup.html">Sign Up</a></li>
-      <li><a href="login.html">Log In</a></li>
-      <li><a href="ticket-booking.html">Ticket Booking System</a></li>
-      <li><a href="movie-booking.html">Movie Tickets</a></li>
-      <li><a href="event-booking.html">Event Tickets</a></li>
-      <li><a href="bus-booking.html">Bus Tickets</a></li>
-      <li><a href="train-booking.html">Train Tickets</a></li>
-    </ul>
-  </nav>
 
-  <!-- Home Page Content -->
-  <section class="home-content">
-    <h1>Welcome to the Ticket Reservation System</h1>
-    <p>
-      Our Ticket Reservation System allows you to easily book Movie, Event, Bus, 
-      and Train tickets online. View available tickets, check event details, and 
-      confirm your reservations all in one place.
-    </p>
-  </section>
+    <!-- 🏪 Main Title -->
+    <h1 align="center">Hari Online Shopping</h1>
+    <hr>
+
+    <!-- 🖼️ Product Gallery -->
+    <table align="center" cellpadding="20">
+        <tr>
+            <td>
+                <a href="watch.html">
+                    <!-- Watch Image with image map -->
+<img src="media/watch.png" usemap="#watchMap" alt="Watch" width="200" height="200">
+
+<map name="watchMap">
+  <!-- First: actual watch clickable area -->
+  <area shape="circle" coords="150,150,60" href="watch.html" alt="Go to Watch Page">
+
+  <!-- Then: surrounding background clickable area excluding the watch -->
+  <area shape="rect" coords="0,0,300,300" href="more-watches.html" alt="More Watches"
+        onclick="const x = event.offsetX; const y = event.offsetY;
+                 const dx = x - 150; const dy = y - 150;
+                 if (Math.sqrt(dx*dx + dy*dy) <= 60) event.preventDefault();">
+</map>
+
+                </a>
+            </td>
+            <td>
+                <a href="jersey.html">
+                    <img src="media/jersey.png" alt="Jersey" width="200" height="200">
+                </a>
+            </td>
+            <td>
+                <a href="car.html">
+                    <img src="media/car.png" alt="Car" width="200" height="200">
+                </a>
+            </td>
+        </tr>
+        <tr align="center">
+            <td><strong>Watch</strong></td>
+            <td><strong>Jersey</strong></td>
+            <td><strong>Car</strong></td>
+        </tr>
+        <tr align="center">
+            <td>Rs: 200</td>
+            <td>Rs: 500</td>
+            <td>Rs: 70000</td>
+        </tr>
+    </table>
+     <!-- 🛒 Drag and Drop Cart Section -->
+<hr>
+<h2 align="center">🛒 Add Products to Cart</h2>
+
+<table align="center" cellpadding="20">
+    <tr>
+        <td>
+            <!-- Draggable Items -->
+            <img src="media/watch.png" alt="Watch" width="100" height="100" draggable="true"
+                 ondragstart="drag(event)" id="Watch - Rs:200">
+            <img src="media/jersey.png" alt="Jersey" width="100" height="100" draggable="true"
+                 ondragstart="drag(event)" id="Jersey - Rs:500">
+            <img src="media/car.png" alt="Car" width="100" height="100" draggable="true"
+                 ondragstart="drag(event)" id="Car - Rs:70000">
+        </td>
+
+        <td>
+            <!-- Drop Area -->
+            <div id="cart" ondrop="drop(event)" ondragover="allowDrop(event)"
+                 style="width:300px; height:200px; border:2px dashed #000; padding:10px;">
+                <h3>Cart</h3>
+                <ul id="cartItems"></ul>
+                <p><strong>Total: Rs <span id="total">0</span></strong></p>
+                <button onclick="buyNow()">Buy Now</button>
+                <button onclick="refreshCart()">Refresh</button>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<!-- 🔗 Geolocation -->
+<hr>
+<h2 align="center">📍 Visit our Store in Chennai</h2>
+<p align="center">
+    <a href="https://www.google.com/maps?q=Phoenix+Marketcity+Chennai" target="_blank">
+        Click here to view our store location
+        </a>
+        
+</p>
+
+<!-- JS Script -->
+<script src="script.js"></script>
+
 </body>
 </html>
