@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Ticket Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Ticket Reservation System</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="login.html">Log In</a></li>
+      <li><a href="ticket-booking.html">Ticket Booking System</a></li>
+      <li><a href="movie-booking.html">Movie Tickets</a></li>
+      <li><a href="event-booking.html" class="active">Event Tickets</a></li>
+      <li><a href="bus-booking.html">Bus Tickets</a></li>
+      <li><a href="train-booking.html">Train Tickets</a></li>
+    </ul>
+  </nav>
+
+  <!-- Event Ticket Content -->
+  <section class="booking-content">
+    <h2>Event Ticket Booking</h2>
+
+    <!-- Table: Available Events -->
+    <h3>Available Events</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Event Name</th>
+          <th>Date & Time</th>
+          <th>Price</th>
+          <th>Seats Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Coolie Audio Launch</td>
+          <td>15th Aug, 5:00 PM</td>
+          <td>₹400</td>
+          <td>150</td>
+        </tr>
+        <tr>
+          <td>A.R. Rahman Concert</td>
+          <td>20th Aug, 7:00 PM</td>
+          <td>₹1200</td>
+          <td>200</td>
+        </tr>
+        <tr>
+          <td>Blackpink Music Arena</td>
+          <td>28th Aug, 6:30 PM</td>
+          <td>₹2500</td>
+          <td>300</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- List: Highlights / Rules -->
+    <h3>Important Information</h3>
+    <ul>
+      <li>Gates will open 1 hour before the event start time.</li>
+      <li>Please carry a valid photo ID along with the ticket.</li>
+      <li>Tickets are non-refundable and non-transferable.</li>
+    </ul>
+
+    <!-- Booking Form -->
+    <h3>Book Your Ticket</h3>
+    <form>
+      <label for="event">Select Event:</label>
+      <select id="event" name="event" required>
+        <option value="">--Choose an Event--</option>
+        <option value="coolie">Coolie Audio Launch</option>
+        <option value="rahman">A.R. Rahman Concert</option>
+        <option value="blackpink">Blackpink Music Arena</option>
+      </select>
+
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="seats">Number of Seats:</label>
+      <input type="number" id="seats" name="seats" min="1" max="10" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </section>
+</body>
+</html>
