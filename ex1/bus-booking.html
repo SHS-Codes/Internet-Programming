@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Ticket Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Ticket Reservation System</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="login.html">Log In</a></li>
+      <li><a href="ticket-booking.html">Ticket Booking System</a></li>
+      <li><a href="movie-booking.html">Movie Tickets</a></li>
+      <li><a href="event-booking.html">Event Tickets</a></li>
+      <li><a href="bus-booking.html" class="active">Bus Tickets</a></li>
+      <li><a href="train-booking.html">Train Tickets</a></li>
+    </ul>
+  </nav>
+
+  <!-- Bus Ticket Content -->
+  <section class="booking-content">
+    <h2>Bus Ticket Booking</h2>
+
+    <!-- Table: Available Buses -->
+    <h3>Available Buses</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Bus Name</th>
+          <th>Boarding Point</th>
+          <th>Departure Point</th>
+          <th>Type of Bus</th>
+          <th>Departure Time</th>
+          <th>Price</th>
+          <th>Seats Available</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>KPN Travels</td>
+          <td>Chennai</td>
+          <td>Madurai</td>
+          <td>AC Sleeper</td>
+          <td>9:00 PM</td>
+          <td>₹950</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>Parveen Travels</td>
+          <td>Coimbatore</td>
+          <td>Chennai</td>
+          <td>Semi-Sleeper</td>
+          <td>10:30 PM</td>
+          <td>₹750</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>Kallada Travels</td>
+          <td>Madurai</td>
+          <td>Trichy</td>
+          <td>Express</td>
+          <td>6:00 AM</td>
+          <td>₹250</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td>Universal Travels</td>
+          <td>Salem</td>
+          <td>Chennai</td>
+          <td>AC Seater</td>
+          <td>11:00 PM</td>
+          <td>₹600</td>
+          <td>18</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- List: Highlights / Rules -->
+    <h3>Important Information</h3>
+    <ul>
+      <li>Please carry a valid ID proof while boarding.</li>
+      <li>Arrive at the boarding point at least 20 minutes before departure.</li>
+      <li>Tickets once booked cannot be cancelled.</li>
+    </ul>
+
+    <!-- Booking Form -->
+    <h3>Book Your Ticket</h3>
+    <form>
+      <label for="bus">Select Route:</label>
+      <select id="bus" name="bus" required>
+        <option value="">--Choose a Bus--</option>
+        <option value="kpn">KPN Travels - Chennai → Madurai (AC Sleeper)</option>
+        <option value="parveen">Parveen Travels - Coimbatore → Chennai (Semi-Sleeper)</option>
+        <option value="kallada">Kallada Travels - Madurai → Trichy (Express)</option>
+        <option value="universal">Universal Travels - Salem → Chennai (AC Seater)</option>
+      </select>
+
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="seats">Number of Seats:</label>
+      <input type="number" id="seats" name="seats" min="1" max="10" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </section>
+</body>
+</html>

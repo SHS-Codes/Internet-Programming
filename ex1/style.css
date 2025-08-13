@@ -1,0 +1,227 @@
+/***** Reset *****/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+}
+  
+/***** Navbar *****/
+.navbar {
+    background: #1875d1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+  
+.logo {
+    color: #f8fafaec;
+    font-size: 20px;
+    font-weight: bold;
+}
+  
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+  
+.nav-links li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: 500;
+    padding: 8px 12px;
+}
+  
+.nav-links li a:hover,
+.nav-links li a.active {
+    background: #af75dff1;
+    border-radius: 4px;
+}
+  
+/***** Home Content *****/
+.home-content {
+    text-align: center;
+    margin-top: 80px;
+}
+  
+.home-content h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+  
+.home-content p {
+    width: 70%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/***** Forms (SignUp & Login Pages) *****/
+.form-section {
+    width: 400px;
+    background: #fff;
+    padding: 25px;
+    margin: 60px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background: #1875d1;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #070be7;
+}
+
+/***** Ticket Booking System Page *****/
+.ticket-booking-content {
+    text-align: center;
+    margin-top: 80px;
+  }
+  
+  .ticket-booking-content h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+  }
+  
+  .booking-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .btn-book {
+    display: inline-block;
+    background: #1875d1;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    width: 220px;
+    text-align: center;
+  }
+  
+  .btn-book:hover {
+    background: #070be7;
+  }
+  
+  /***** Booking Pages (Movie/Event/Bus/Train) *****/
+.booking-content {
+    width: 80%;
+    margin: 40px auto;
+  }
+  
+  .booking-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .booking-content h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #1875d1;
+  }
+  
+  /***** Table Styles *****/
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  table th {
+    background: #1875d1;
+    color: #fff;
+  }
+  
+  /***** List Styles *****/
+  ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /***** Form Styles (reuse) *****/
+  .booking-content form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .booking-content form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .booking-content form input,
+  .booking-content form select {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .booking-content form button {
+    background: #1875d1;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .booking-content form button:hover {
+    background: #070be7;
+  }
+  
