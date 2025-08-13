@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(240, 248, 255); /* Fallback */
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), 
+                rgb(255, 230, 200), rgb(200, 230, 255));
+    color: #333;
+    transition: background 0.3s ease;
+}
+h1, h2, h3 {
+    text-align: center;
+    color: #222;
+}
+hr {
+    border: none;
+    height: 2px;
+    background: #ddd;
+    margin: 20px auto;
+    width: 80%;
+}
+table {
+    border-collapse: collapse;
+}
+table td {
+    text-align: center;
+    vertical-align: top;
+}
+table img {
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+table img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+#cart {
+    background: #fff;
+    border: 2px dashed #444;
+    border-radius: 10px;
+    text-align: left;
+}
+#cart h3 {
+    margin-top: 0;
+    text-align: center;
+}
+#cart ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+#cart ul li {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+}
+#cart button {
+    background: #28a745;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 2px;
+    transition: background 0.2s ease;
+}
+#cart button:hover {
+    background: #218838;
+}
+#cart button:nth-child(2) {
+    background: #dc3545;
+}
+#cart button:nth-child(2):hover {
+    background: #c82333;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+ul {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0;
+}
+ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+audio, video {
+    display: block;
+    margin: 20px auto;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+audio:hover, video:hover {
+    transform: scale(1.02);
+}
+.playing {
+    animation: glowPulse 1.5s infinite;
+}
+
+@keyframes glowPulse {
+    0% { box-shadow: 0 0 10px rgba(0, 200, 255, 0.6); }
+    50% { box-shadow: 0 0 20px rgba(0, 200, 255, 1); }
+    100% { box-shadow: 0 0 10px rgba(0, 200, 255, 0.6); }
+}
+p {
+    text-align: center;
+}
